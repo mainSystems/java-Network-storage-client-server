@@ -1,0 +1,10 @@
+INFO  2022-10-02 02:33:38 [nioEventLoopGroup-2-1] main.systems.client.controllers.ClientController (ClientController.java:45) - Sending file: C:\java\testFileDelete2.txt
+INFO  2022-10-02 02:33:38 [nioEventLoopGroup-3-1] main.systems.client.controllers.ClientController (ClientController.java:45) - Sending file: C:\java\testFileDelete.txt
+INFO  2022-10-02 02:33:51 [nioEventLoopGroup-4-1] main.systems.client.controllers.ClientController (ClientController.java:45) - Sending file: C:\java\testFileDelete2.txt
+INFO  2022-10-02 02:33:51 [nioEventLoopGroup-5-1] main.systems.client.controllers.ClientController (ClientController.java:45) - Sending file: C:\java\testFileDelete.txt
+INFO  2022-10-02 02:34:55 [nioEventLoopGroup-2-1] main.systems.client.controllers.ClientController (ClientController.java:45) - Sending file: C:\java\testFileDelete2.txt
+INFO  2022-10-02 02:34:55 [nioEventLoopGroup-3-1] main.systems.client.controllers.ClientController (ClientController.java:45) - Sending file: C:\java\testFileDelete.txt
+INFO  2022-10-02 02:36:48 [nioEventLoopGroup-4-1] main.systems.client.controllers.ClientController (ClientController.java:45) - Sending file: C:\java\testFileDelete2.txt
+INFO  2022-10-02 02:36:48 [nioEventLoopGroup-5-1] main.systems.client.controllers.ClientController (ClientController.java:45) - Sending file: C:\java\testFileDelete.txt
+INFO  2022-10-02 02:39:15 [nioEventLoopGroup-2-1] main.systems.client.controllers.ClientController (ClientController.java:45) - Sending file: C:\java\testFileDelete.txt
+INFO  2022-10-02 02:39:15 [nioEventLoopGroup-3-1] main.systems.client.controllers.ClientController (ClientController.java:45) - Sending file: C:\java\testFileDelete2.txt
