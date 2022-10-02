@@ -2,7 +2,6 @@ package systems.common;
 
 import java.io.File;
 import java.io.Serializable;
-import java.util.Arrays;
 
 public class Message implements Serializable {
 
@@ -27,13 +26,4 @@ public class Message implements Serializable {
     public byte[] getData() {
         return data;
     }
-
-//    @Override
-//    public String toString() {
-//        return "Message{" +
-//                "command='" + command + '\'' +
-//                ", file=" + file +
-//                ", data=" + Arrays.toString(data) +
-//                '}';
-//    }
 }

@@ -8,3 +8,16 @@ INFO  2022-10-02 02:36:48 [nioEventLoopGroup-4-1] main.systems.client.controller
 INFO  2022-10-02 02:36:48 [nioEventLoopGroup-5-1] main.systems.client.controllers.ClientController (ClientController.java:45) - Sending file: C:\java\testFileDelete.txt
 INFO  2022-10-02 02:39:15 [nioEventLoopGroup-2-1] main.systems.client.controllers.ClientController (ClientController.java:45) - Sending file: C:\java\testFileDelete.txt
 INFO  2022-10-02 02:39:15 [nioEventLoopGroup-3-1] main.systems.client.controllers.ClientController (ClientController.java:45) - Sending file: C:\java\testFileDelete2.txt
+ERROR 2022-10-02 22:07:53 [JavaFX Application Thread] main.systems.client.controllers.ClientController (ClientController.java:55) - File not found: C:\java\testFileDelete2.txt
+ERROR 2022-10-02 22:07:53 [JavaFX Application Thread] main.systems.client.controllers.ClientController (ClientController.java:55) - File not found: C:\java\testFileDelete.txt
+INFO  2022-10-02 22:08:58 [nioEventLoopGroup-2-1] main.systems.client.controllers.ClientController (ClientController.java:52) - Sending file: C:\java\testFileDelete.txt
+INFO  2022-10-02 22:08:58 [nioEventLoopGroup-3-1] main.systems.client.controllers.ClientController (ClientController.java:52) - Sending file: C:\java\testFileDelete2.txt
+ERROR 2022-10-02 22:19:21 [JavaFX Application Thread] main.systems.client.controllers.ClientController (ClientController.java:56) - File not found: Z:\java\databases\lesson7\lesson7.txt
+ERROR 2022-10-02 22:19:54 [JavaFX Application Thread] main.systems.client.controllers.ClientController (ClientController.java:56) - File not found: Z:\java\databases\lesson7\lesson7.txt
+INFO  2022-10-02 22:20:10 [nioEventLoopGroup-2-1] main.systems.client.controllers.ClientController (ClientController.java:53) - Sending file: C:\java\testFileDelete.txt
+INFO  2022-10-02 22:21:18 [nioEventLoopGroup-2-1] main.systems.client.controllers.ClientController (ClientController.java:53) - Sending file: C:\java\testFileDelete.txt
+INFO  2022-10-02 22:22:20 [nioEventLoopGroup-2-1] main.systems.client.controllers.ClientController (ClientController.java:53) - Sending file: C:\java\testFileDelete2.txt
+INFO  2022-10-02 22:37:12 [nioEventLoopGroup-2-1] main.systems.client.controllers.ClientController (ClientController.java:57) - Sending file: C:\java\testFileDelete2.txt
+INFO  2022-10-02 22:38:59 [nioEventLoopGroup-2-1] main.systems.client.controllers.ClientController (ClientController.java:57) - Sending file: C:\java\testFileDelete2.txt
+INFO  2022-10-02 22:46:41 [nioEventLoopGroup-2-1] main.systems.client.controllers.ClientController (ClientController.java:57) - Sending file: C:\java\testFileDelete2.txt
+INFO  2022-10-03 01:38:41 [nioEventLoopGroup-2-1] main.systems.client.controllers.ClientController (ClientController.java:57) - Sending file: C:\java\testFileDelete2.txt
