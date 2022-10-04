@@ -6,8 +6,12 @@ import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import systems.common.CommandType;
+import systems.common.SqlCommands;
+import systems.common.StorageCommands;
 import systems.common.Message;
 
+import java.io.IOException;
 import java.nio.file.FileAlreadyExistsException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -15,22 +19,39 @@ import java.nio.file.Path;
 public class ServerHandler extends SimpleChannelInboundHandler<Message> {
     private static final String SERVER_USER_DIR = "server/user-dir";
     private static final Logger logger = LogManager.getLogger(ServerHandler.class);
+    private String username = null;
 
     @Override
     protected void channelRead0(ChannelHandlerContext ctx, Message msg) throws Exception {
-        if (msg.getCommand().equals("put")) {
+
+        if (msg.getCommandType().equals(CommandType.SQL)) {
+            if (msg.getSqlCommands().equals(SqlCommands.SELECT_USERNAME_AUTH)){
+                SqliteHandler.connect();
+                username = SqliteHandler.sqlTask(SqlCommands.SELECT_USERNAME_AUTH,msg.getUsername(),msg.getPassword());
+                SqliteHandler.disconnect();
+                System.out.println("username = " + username);
+            }
+        }
+
+        if (msg.getCommandType().equals(CommandType.STORAGE)) {
+            msgStorage(ctx, msg);
+        }
+    }
+
+    private void msgStorage(ChannelHandlerContext ctx, Message msg) throws IOException {
+        if (msg.getStorageCommand().equals(StorageCommands.PUT)) {
             Path root = Path.of(SERVER_USER_DIR);
             Files.createDirectories(root);
-//            Path file = root.resolve(msg.getFile().getPath());
             Path file = root.resolve(msg.getFile().getName());
-//            Files.createDirectories(file.getParent());
             try {
                 Files.createFile(file);
             } catch (FileAlreadyExistsException ignored) {
-                    logger.error("File already exist");
+                logger.error("File already exist");
             }
-            Files.write(file,msg.getData());
+            Files.write(file, msg.getData());
         }
+
+
         ChannelFuture future = ctx.writeAndFlush(String.format("File %s sended\n", msg.getFile().getName()));
         future.addListener(ChannelFutureListener.CLOSE);
     }

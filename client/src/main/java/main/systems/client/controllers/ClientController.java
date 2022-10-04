@@ -14,11 +14,11 @@ import javafx.stage.Stage;
 import main.systems.client.Client;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import systems.common.StorageCommands;
 import systems.common.Message;
 
 import java.io.File;
 import java.io.IOException;
-import java.io.Serializable;
 import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -29,7 +29,6 @@ import java.util.ResourceBundle;
 public class ClientController implements Initializable {
     private static final String LOCALHOST = "localhost";
     private static final int PORT = 8189;
-    private static final String PUT = "put";
     private static final String SERVER_USER_DIR = "server/user-dir";
 
     @FXML
@@ -52,7 +51,8 @@ public class ClientController implements Initializable {
         List<File> files = dragEvent.getDragboard().getFiles();
         for (File file : files) {
             try {
-                Message message = new Message(PUT, file, Files.readAllBytes(file.toPath()));
+//                Message message = new Message(PUT, file, Files.readAllBytes(file.toPath()));
+                Message message = new Message(StorageCommands.PUT, file, Files.readAllBytes(file.toPath()));
                 new Client(LOCALHOST, PORT).send(message, (response) -> {
                     logger.info("Sending file: " + file);
                 });
