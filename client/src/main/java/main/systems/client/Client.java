@@ -4,6 +4,8 @@ import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.*;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.nio.NioSocketChannel;
+import io.netty.handler.codec.DelimiterBasedFrameDecoder;
+import io.netty.handler.codec.Delimiters;
 import io.netty.handler.codec.LineBasedFrameDecoder;
 import io.netty.handler.codec.serialization.ObjectEncoder;
 import io.netty.handler.codec.string.StringDecoder;
@@ -40,7 +42,7 @@ public class Client {
 //        }
 //    }
 
-    public void send(Message message, Consumer<String> callback) {
+    public void send(Message message, Consumer<Message> callback) {
         EventLoopGroup workerGroup = new NioEventLoopGroup();
 
         try {
@@ -53,7 +55,7 @@ public class Client {
                 protected void initChannel(Channel ch) throws Exception {
                     ch.pipeline().addLast(
                         new ObjectEncoder(),
-                        new LineBasedFrameDecoder(80),
+                        new DelimiterBasedFrameDecoder(8192, Delimiters.lineDelimiter()),
                         new StringDecoder(StandardCharsets.UTF_8),
                         new ClientHandler(message,callback)
                     );

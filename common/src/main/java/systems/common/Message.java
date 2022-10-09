@@ -27,6 +27,12 @@ public class Message implements Serializable {
         this.password = password;
     }
 
+    public Message(SqlCommands command, String username) {
+        commandType = CommandType.SQL;
+        this.sqlCommands = command;
+        this.username = username;
+    }
+
     public StorageCommands getStorageCommand() {
         return storageCommand;
     }
