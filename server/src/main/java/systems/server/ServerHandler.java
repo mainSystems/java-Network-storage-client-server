@@ -15,27 +15,38 @@ import java.io.IOException;
 import java.nio.file.FileAlreadyExistsException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.sql.SQLException;
 
 public class ServerHandler extends SimpleChannelInboundHandler<Message> {
     private static final String SERVER_USER_DIR = "server/user-dir";
     private static final Logger logger = LogManager.getLogger(ServerHandler.class);
     private String username = null;
 
+
     @Override
     protected void channelRead0(ChannelHandlerContext ctx, Message msg) throws Exception {
 
         if (msg.getCommandType().equals(CommandType.SQL)) {
-            if (msg.getSqlCommands().equals(SqlCommands.SELECT_USERNAME_AUTH)){
-                SqliteHandler.connect();
-                username = SqliteHandler.sqlTask(SqlCommands.SELECT_USERNAME_AUTH,msg.getUsername(),msg.getPassword());
-                SqliteHandler.disconnect();
-                System.out.println("username = " + username);
-            }
+            msgAuth(ctx, msg);
         }
 
         if (msg.getCommandType().equals(CommandType.STORAGE)) {
             msgStorage(ctx, msg);
         }
+
+    }
+
+    private void msgAuth(ChannelHandlerContext ctx, Message msg) throws ClassNotFoundException, SQLException {
+        if (msg.getSqlCommands().equals(SqlCommands.SELECT_USERNAME_AUTH)) {
+            SqliteHandler.connect();
+            username = SqliteHandler.sqlTask(SqlCommands.SELECT_USERNAME_AUTH, msg.getUsername(), msg.getPassword());
+            SqliteHandler.disconnect();
+        }
+        Message msgResult = new Message(SqlCommands.AUTH_STATE, username);
+
+//        ChannelFuture future = ctx.writeAndFlush(String.format("Username %s\n", username));
+        ChannelFuture future = ctx.writeAndFlush(msgResult);
+        future.addListener(ChannelFutureListener.CLOSE);
     }
 
     private void msgStorage(ChannelHandlerContext ctx, Message msg) throws IOException {
@@ -50,7 +61,6 @@ public class ServerHandler extends SimpleChannelInboundHandler<Message> {
             }
             Files.write(file, msg.getData());
         }
-
 
         ChannelFuture future = ctx.writeAndFlush(String.format("File %s sended\n", msg.getFile().getName()));
         future.addListener(ChannelFutureListener.CLOSE);

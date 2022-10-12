@@ -8,13 +8,13 @@ import systems.common.Message;
 
 import java.util.function.Consumer;
 
-public class ClientHandler extends SimpleChannelInboundHandler<String> {
+public class ClientHandler extends SimpleChannelInboundHandler<Message> {
 
     private final Message message;
-    private final Consumer<String> callback;
+    private final Consumer<Message> callback;
     private static final Logger logger = LogManager.getLogger(ClientHandler.class);
 
-    public ClientHandler(Message message, Consumer<String> callback) {
+    public ClientHandler(Message message, Consumer<Message> callback) {
         this.message = message;
         this.callback = callback;
     }
@@ -25,9 +25,16 @@ public class ClientHandler extends SimpleChannelInboundHandler<String> {
         ctx.writeAndFlush(message);
     }
 
+//    @Override
+//    protected void channelRead0(ChannelHandlerContext ctx, String msg) throws Exception {
+//        callback.accept(msg);
+//        System.out.println(msg);
+//    }
     @Override
-    protected void channelRead0(ChannelHandlerContext ctx, String msg) throws Exception {
+    protected void channelRead0(ChannelHandlerContext ctx, Message msg) throws Exception {
         callback.accept(msg);
+        System.out.println(msg.getCommandType());
+        System.out.println(msg.getUsername());
     }
 
     @Override
