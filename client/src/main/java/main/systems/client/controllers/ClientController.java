@@ -1,7 +1,6 @@
 package main.systems.client.controllers;
 
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
@@ -14,25 +13,23 @@ import javafx.stage.Stage;
 import main.systems.client.Client;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import systems.common.StorageCommands;
 import systems.common.Message;
-
+import systems.common.StorageCommands;
 import java.io.File;
 import java.io.IOException;
-import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.List;
 import java.util.Objects;
-import java.util.ResourceBundle;
 
-public class ClientController implements Initializable {
+public class ClientController {
     private static final String LOCALHOST = "localhost";
     private static final int PORT = 8189;
-    private static final String SERVER_USER_DIR = "server/user-dir";
+    private static final String SERVER_USER_DIR = "server/storage/";
+    private static String userName;
 
     @FXML
-    private Label welcomeText;
+    private Label clientLabel;
     @FXML
     private ProgressBar progressBar;
     @FXML
@@ -51,8 +48,7 @@ public class ClientController implements Initializable {
         List<File> files = dragEvent.getDragboard().getFiles();
         for (File file : files) {
             try {
-//                Message message = new Message(PUT, file, Files.readAllBytes(file.toPath()));
-                Message message = new Message(StorageCommands.PUT, file, Files.readAllBytes(file.toPath()));
+                Message message = new Message(StorageCommands.PUT, userName, file, Files.readAllBytes(file.toPath()));
                 new Client(LOCALHOST, PORT).send(message, (response) -> {
                     logger.info("Sending file: " + file);
                 });
@@ -61,7 +57,6 @@ public class ClientController implements Initializable {
                 e.printStackTrace();
             }
         }
-//        treeView.refresh(getNodesForDirectory(new File(SERVER_USER_DIR)));
     }
 
     public void handleMouseClicked(MouseEvent mouseEvent) {
@@ -70,12 +65,10 @@ public class ClientController implements Initializable {
         stage.close();
     }
 
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-        Path root = Path.of(SERVER_USER_DIR);
-//        Files.createDirectories(root);
+    public void getTreeFiles() {
+        Path root = Path.of(SERVER_USER_DIR + userName);
         if (Files.exists(root)) {
-            treeView.setRoot(getNodesForDirectory(new File(SERVER_USER_DIR)));
+            treeView.setRoot(getNodesForDirectory(new File(SERVER_USER_DIR + userName)));
         }
     }
 
@@ -88,5 +81,13 @@ public class ClientController implements Initializable {
                 root.getChildren().add(new TreeItem<String>(f.getName()));
         }
         return root;
+    }
+
+    public void setUserName(String userName) {
+        ClientController.userName = userName;
+    }
+
+    public void setClientLabel(String username) {
+        this.clientLabel.setText("NetworkStorage: " + username);
     }
 }

@@ -18,7 +18,7 @@ import java.nio.file.Path;
 import java.sql.SQLException;
 
 public class ServerHandler extends SimpleChannelInboundHandler<Message> {
-    private static final String SERVER_USER_DIR = "server/user-dir";
+    private static final String SERVER_USER_DIR = "server/storage/";
     private static final Logger logger = LogManager.getLogger(ServerHandler.class);
     private String username = null;
 
@@ -44,14 +44,13 @@ public class ServerHandler extends SimpleChannelInboundHandler<Message> {
         }
         Message msgResult = new Message(SqlCommands.AUTH_STATE, username);
 
-//        ChannelFuture future = ctx.writeAndFlush(String.format("Username %s\n", username));
         ChannelFuture future = ctx.writeAndFlush(msgResult);
         future.addListener(ChannelFutureListener.CLOSE);
     }
 
     private void msgStorage(ChannelHandlerContext ctx, Message msg) throws IOException {
         if (msg.getStorageCommand().equals(StorageCommands.PUT)) {
-            Path root = Path.of(SERVER_USER_DIR);
+            Path root = Path.of(SERVER_USER_DIR + msg.getUsername());
             Files.createDirectories(root);
             Path file = root.resolve(msg.getFile().getName());
             try {
@@ -60,6 +59,7 @@ public class ServerHandler extends SimpleChannelInboundHandler<Message> {
                 logger.error("File already exist");
             }
             Files.write(file, msg.getData());
+            logger.info("Receiving file: " + file);
         }
 
         ChannelFuture future = ctx.writeAndFlush(String.format("File %s sended\n", msg.getFile().getName()));

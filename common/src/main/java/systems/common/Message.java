@@ -20,6 +20,14 @@ public class Message implements Serializable {
         this.data = data;
     }
 
+    public Message(StorageCommands command, String username, File file, byte[] data) {
+        commandType = CommandType.STORAGE;
+        this.storageCommand = command;
+        this.file = file;
+        this.data = data;
+        this.username = username;
+    }
+
     public Message(SqlCommands command, String username, String password) {
         commandType = CommandType.SQL;
         this.sqlCommands = command;
