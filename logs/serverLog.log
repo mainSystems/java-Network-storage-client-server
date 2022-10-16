@@ -147,3 +147,136 @@ ERROR 2022-10-13 01:19:42 [nioEventLoopGroup-3-2] systems.server.ServerHandler (
 INFO  2022-10-13 01:22:56 [main] systems.server.Server (Server.java:34) - Server started at port: 8189 Waiting connection...
 INFO  2022-10-13 01:26:57 [main] systems.server.Server (Server.java:34) - Server started at port: 8189 Waiting connection...
 ERROR 2022-10-13 02:15:50 [nioEventLoopGroup-3-2] systems.server.ServerHandler (ServerHandler.java:59) - File already exist
+INFO  2022-10-14 23:20:33 [main] systems.server.Server (Server.java:34) - Server started at port: 8189 Waiting connection...
+ERROR 2022-10-15 00:35:51 [nioEventLoopGroup-3-4] systems.server.ServerHandler (ServerHandler.java:59) - File already exist
+INFO  2022-10-15 00:35:51 [nioEventLoopGroup-3-4] systems.server.ServerHandler (ServerHandler.java:62) - Receiving file: server\storage\1\testFileDelete2.txt
+ERROR 2022-10-15 00:36:26 [nioEventLoopGroup-3-5] systems.server.ServerHandler (ServerHandler.java:59) - File already exist
+INFO  2022-10-15 00:36:26 [nioEventLoopGroup-3-5] systems.server.ServerHandler (ServerHandler.java:62) - Receiving file: server\storage\1\testFileDelete2.txt
+ERROR 2022-10-15 00:37:37 [nioEventLoopGroup-3-1] systems.server.ServerHandler (ServerHandler.java:59) - File already exist
+INFO  2022-10-15 00:37:37 [nioEventLoopGroup-3-1] systems.server.ServerHandler (ServerHandler.java:62) - Receiving file: server\storage\1\testFileDelete2.txt
+ERROR 2022-10-15 00:40:43 [nioEventLoopGroup-3-3] systems.server.ServerHandler (ServerHandler.java:59) - File already exist
+INFO  2022-10-15 00:40:43 [nioEventLoopGroup-3-3] systems.server.ServerHandler (ServerHandler.java:62) - Receiving file: server\storage\1\testFileDelete2.txt
+ERROR 2022-10-15 00:40:43 [nioEventLoopGroup-3-4] systems.server.ServerHandler (ServerHandler.java:59) - File already exist
+INFO  2022-10-15 00:40:43 [nioEventLoopGroup-3-4] systems.server.ServerHandler (ServerHandler.java:62) - Receiving file: server\storage\1\testFileDelete2.txt
+ERROR 2022-10-15 00:40:43 [nioEventLoopGroup-3-5] systems.server.ServerHandler (ServerHandler.java:59) - File already exist
+INFO  2022-10-15 00:40:43 [nioEventLoopGroup-3-5] systems.server.ServerHandler (ServerHandler.java:62) - Receiving file: server\storage\1\testFileDelete2.txt
+ERROR 2022-10-15 00:40:43 [nioEventLoopGroup-3-6] systems.server.ServerHandler (ServerHandler.java:59) - File already exist
+INFO  2022-10-15 00:40:43 [nioEventLoopGroup-3-6] systems.server.ServerHandler (ServerHandler.java:62) - Receiving file: server\storage\1\testFileDelete2.txt
+ERROR 2022-10-15 00:40:44 [nioEventLoopGroup-3-1] systems.server.ServerHandler (ServerHandler.java:59) - File already exist
+INFO  2022-10-15 00:40:44 [nioEventLoopGroup-3-1] systems.server.ServerHandler (ServerHandler.java:62) - Receiving file: server\storage\1\testFileDelete2.txt
+ERROR 2022-10-15 00:40:44 [nioEventLoopGroup-3-2] systems.server.ServerHandler (ServerHandler.java:59) - File already exist
+INFO  2022-10-15 00:40:44 [nioEventLoopGroup-3-2] systems.server.ServerHandler (ServerHandler.java:62) - Receiving file: server\storage\1\testFileDelete2.txt
+ERROR 2022-10-15 00:40:44 [nioEventLoopGroup-3-3] systems.server.ServerHandler (ServerHandler.java:59) - File already exist
+INFO  2022-10-15 00:40:44 [nioEventLoopGroup-3-3] systems.server.ServerHandler (ServerHandler.java:62) - Receiving file: server\storage\1\testFileDelete2.txt
+ERROR 2022-10-15 00:40:44 [nioEventLoopGroup-3-4] systems.server.ServerHandler (ServerHandler.java:59) - File already exist
+INFO  2022-10-15 00:40:44 [nioEventLoopGroup-3-4] systems.server.ServerHandler (ServerHandler.java:62) - Receiving file: server\storage\1\testFileDelete2.txt
+ERROR 2022-10-15 00:40:44 [nioEventLoopGroup-3-5] systems.server.ServerHandler (ServerHandler.java:59) - File already exist
+INFO  2022-10-15 00:40:44 [nioEventLoopGroup-3-5] systems.server.ServerHandler (ServerHandler.java:62) - Receiving file: server\storage\1\testFileDelete2.txt
+ERROR 2022-10-15 00:40:44 [nioEventLoopGroup-3-6] systems.server.ServerHandler (ServerHandler.java:59) - File already exist
+INFO  2022-10-15 00:40:44 [nioEventLoopGroup-3-6] systems.server.ServerHandler (ServerHandler.java:62) - Receiving file: server\storage\1\testFileDelete2.txt
+ERROR 2022-10-15 00:40:44 [nioEventLoopGroup-3-1] systems.server.ServerHandler (ServerHandler.java:59) - File already exist
+INFO  2022-10-15 00:40:44 [nioEventLoopGroup-3-1] systems.server.ServerHandler (ServerHandler.java:62) - Receiving file: server\storage\1\testFileDelete2.txt
+ERROR 2022-10-15 00:40:44 [nioEventLoopGroup-3-2] systems.server.ServerHandler (ServerHandler.java:59) - File already exist
+INFO  2022-10-15 00:40:44 [nioEventLoopGroup-3-2] systems.server.ServerHandler (ServerHandler.java:62) - Receiving file: server\storage\1\testFileDelete2.txt
+ERROR 2022-10-15 00:40:44 [nioEventLoopGroup-3-3] systems.server.ServerHandler (ServerHandler.java:59) - File already exist
+INFO  2022-10-15 00:40:44 [nioEventLoopGroup-3-3] systems.server.ServerHandler (ServerHandler.java:62) - Receiving file: server\storage\1\testFileDelete2.txt
+ERROR 2022-10-15 00:40:44 [nioEventLoopGroup-3-4] systems.server.ServerHandler (ServerHandler.java:59) - File already exist
+INFO  2022-10-15 00:40:44 [nioEventLoopGroup-3-4] systems.server.ServerHandler (ServerHandler.java:62) - Receiving file: server\storage\1\testFileDelete2.txt
+ERROR 2022-10-15 00:40:44 [nioEventLoopGroup-3-5] systems.server.ServerHandler (ServerHandler.java:59) - File already exist
+INFO  2022-10-15 00:40:44 [nioEventLoopGroup-3-5] systems.server.ServerHandler (ServerHandler.java:62) - Receiving file: server\storage\1\testFileDelete2.txt
+ERROR 2022-10-15 00:40:44 [nioEventLoopGroup-3-6] systems.server.ServerHandler (ServerHandler.java:59) - File already exist
+INFO  2022-10-15 00:40:44 [nioEventLoopGroup-3-6] systems.server.ServerHandler (ServerHandler.java:62) - Receiving file: server\storage\1\testFileDelete2.txt
+ERROR 2022-10-15 00:40:44 [nioEventLoopGroup-3-1] systems.server.ServerHandler (ServerHandler.java:59) - File already exist
+INFO  2022-10-15 00:40:44 [nioEventLoopGroup-3-1] systems.server.ServerHandler (ServerHandler.java:62) - Receiving file: server\storage\1\testFileDelete2.txt
+ERROR 2022-10-15 00:40:44 [nioEventLoopGroup-3-2] systems.server.ServerHandler (ServerHandler.java:59) - File already exist
+INFO  2022-10-15 00:40:44 [nioEventLoopGroup-3-2] systems.server.ServerHandler (ServerHandler.java:62) - Receiving file: server\storage\1\testFileDelete2.txt
+ERROR 2022-10-15 00:40:44 [nioEventLoopGroup-3-3] systems.server.ServerHandler (ServerHandler.java:59) - File already exist
+INFO  2022-10-15 00:40:44 [nioEventLoopGroup-3-3] systems.server.ServerHandler (ServerHandler.java:62) - Receiving file: server\storage\1\testFileDelete2.txt
+ERROR 2022-10-15 00:40:44 [nioEventLoopGroup-3-4] systems.server.ServerHandler (ServerHandler.java:59) - File already exist
+INFO  2022-10-15 00:40:44 [nioEventLoopGroup-3-4] systems.server.ServerHandler (ServerHandler.java:62) - Receiving file: server\storage\1\testFileDelete2.txt
+ERROR 2022-10-15 00:40:44 [nioEventLoopGroup-3-5] systems.server.ServerHandler (ServerHandler.java:59) - File already exist
+INFO  2022-10-15 00:40:44 [nioEventLoopGroup-3-5] systems.server.ServerHandler (ServerHandler.java:62) - Receiving file: server\storage\1\testFileDelete2.txt
+ERROR 2022-10-15 00:40:44 [nioEventLoopGroup-3-6] systems.server.ServerHandler (ServerHandler.java:59) - File already exist
+INFO  2022-10-15 00:40:44 [nioEventLoopGroup-3-6] systems.server.ServerHandler (ServerHandler.java:62) - Receiving file: server\storage\1\testFileDelete2.txt
+ERROR 2022-10-15 00:40:57 [nioEventLoopGroup-3-1] systems.server.ServerHandler (ServerHandler.java:59) - File already exist
+INFO  2022-10-15 00:40:57 [nioEventLoopGroup-3-1] systems.server.ServerHandler (ServerHandler.java:62) - Receiving file: server\storage\1\testFileDelete2.txt
+ERROR 2022-10-15 00:40:57 [nioEventLoopGroup-3-2] systems.server.ServerHandler (ServerHandler.java:59) - File already exist
+INFO  2022-10-15 00:40:57 [nioEventLoopGroup-3-2] systems.server.ServerHandler (ServerHandler.java:62) - Receiving file: server\storage\1\testFileDelete2.txt
+ERROR 2022-10-15 00:40:57 [nioEventLoopGroup-3-3] systems.server.ServerHandler (ServerHandler.java:59) - File already exist
+INFO  2022-10-15 00:40:57 [nioEventLoopGroup-3-3] systems.server.ServerHandler (ServerHandler.java:62) - Receiving file: server\storage\1\testFileDelete2.txt
+ERROR 2022-10-15 00:40:57 [nioEventLoopGroup-3-4] systems.server.ServerHandler (ServerHandler.java:59) - File already exist
+INFO  2022-10-15 00:40:57 [nioEventLoopGroup-3-4] systems.server.ServerHandler (ServerHandler.java:62) - Receiving file: server\storage\1\testFileDelete2.txt
+ERROR 2022-10-15 00:40:57 [nioEventLoopGroup-3-5] systems.server.ServerHandler (ServerHandler.java:59) - File already exist
+INFO  2022-10-15 00:40:57 [nioEventLoopGroup-3-5] systems.server.ServerHandler (ServerHandler.java:62) - Receiving file: server\storage\1\testFileDelete2.txt
+ERROR 2022-10-15 00:40:57 [nioEventLoopGroup-3-6] systems.server.ServerHandler (ServerHandler.java:59) - File already exist
+INFO  2022-10-15 00:40:57 [nioEventLoopGroup-3-6] systems.server.ServerHandler (ServerHandler.java:62) - Receiving file: server\storage\1\testFileDelete2.txt
+ERROR 2022-10-15 00:40:57 [nioEventLoopGroup-3-1] systems.server.ServerHandler (ServerHandler.java:59) - File already exist
+INFO  2022-10-15 00:40:57 [nioEventLoopGroup-3-1] systems.server.ServerHandler (ServerHandler.java:62) - Receiving file: server\storage\1\testFileDelete2.txt
+ERROR 2022-10-15 00:40:57 [nioEventLoopGroup-3-2] systems.server.ServerHandler (ServerHandler.java:59) - File already exist
+INFO  2022-10-15 00:40:57 [nioEventLoopGroup-3-2] systems.server.ServerHandler (ServerHandler.java:62) - Receiving file: server\storage\1\testFileDelete2.txt
+ERROR 2022-10-15 00:40:57 [nioEventLoopGroup-3-3] systems.server.ServerHandler (ServerHandler.java:59) - File already exist
+INFO  2022-10-15 00:40:57 [nioEventLoopGroup-3-3] systems.server.ServerHandler (ServerHandler.java:62) - Receiving file: server\storage\1\testFileDelete2.txt
+ERROR 2022-10-15 00:40:57 [nioEventLoopGroup-3-4] systems.server.ServerHandler (ServerHandler.java:59) - File already exist
+INFO  2022-10-15 00:40:57 [nioEventLoopGroup-3-4] systems.server.ServerHandler (ServerHandler.java:62) - Receiving file: server\storage\1\testFileDelete2.txt
+ERROR 2022-10-15 00:40:57 [nioEventLoopGroup-3-5] systems.server.ServerHandler (ServerHandler.java:59) - File already exist
+INFO  2022-10-15 00:40:57 [nioEventLoopGroup-3-5] systems.server.ServerHandler (ServerHandler.java:62) - Receiving file: server\storage\1\testFileDelete2.txt
+ERROR 2022-10-15 00:40:57 [nioEventLoopGroup-3-6] systems.server.ServerHandler (ServerHandler.java:59) - File already exist
+INFO  2022-10-15 00:40:57 [nioEventLoopGroup-3-6] systems.server.ServerHandler (ServerHandler.java:62) - Receiving file: server\storage\1\testFileDelete2.txt
+ERROR 2022-10-15 00:40:57 [nioEventLoopGroup-3-1] systems.server.ServerHandler (ServerHandler.java:59) - File already exist
+INFO  2022-10-15 00:40:57 [nioEventLoopGroup-3-1] systems.server.ServerHandler (ServerHandler.java:62) - Receiving file: server\storage\1\testFileDelete2.txt
+ERROR 2022-10-15 00:40:57 [nioEventLoopGroup-3-2] systems.server.ServerHandler (ServerHandler.java:59) - File already exist
+INFO  2022-10-15 00:40:57 [nioEventLoopGroup-3-2] systems.server.ServerHandler (ServerHandler.java:62) - Receiving file: server\storage\1\testFileDelete2.txt
+ERROR 2022-10-15 00:42:26 [nioEventLoopGroup-3-4] systems.server.ServerHandler (ServerHandler.java:59) - File already exist
+INFO  2022-10-15 00:42:26 [nioEventLoopGroup-3-4] systems.server.ServerHandler (ServerHandler.java:62) - Receiving file: server\storage\1\testFileDelete2.txt
+ERROR 2022-10-15 00:42:58 [nioEventLoopGroup-3-5] systems.server.ServerHandler (ServerHandler.java:59) - File already exist
+INFO  2022-10-15 00:42:58 [nioEventLoopGroup-3-5] systems.server.ServerHandler (ServerHandler.java:62) - Receiving file: server\storage\1\testFileDelete2.txt
+ERROR 2022-10-15 01:09:56 [nioEventLoopGroup-3-4] systems.server.ServerHandler (ServerHandler.java:71) - We got exception
+INFO  2022-10-15 01:10:29 [main] systems.server.Server (Server.java:34) - Server started at port: 8189 Waiting connection...
+ERROR 2022-10-15 01:11:05 [nioEventLoopGroup-3-2] systems.server.ServerHandler (ServerHandler.java:71) - We got exception
+ERROR 2022-10-15 01:12:02 [nioEventLoopGroup-3-4] systems.server.ServerHandler (ServerHandler.java:71) - We got exception
+INFO  2022-10-15 01:12:29 [main] systems.server.Server (Server.java:34) - Server started at port: 8189 Waiting connection...
+ERROR 2022-10-15 01:13:09 [nioEventLoopGroup-3-3] systems.server.ServerHandler (ServerHandler.java:59) - File already exist
+INFO  2022-10-15 01:13:09 [nioEventLoopGroup-3-3] systems.server.ServerHandler (ServerHandler.java:62) - Receiving file: server\storage\1\testFileDelete2.txt
+INFO  2022-10-15 01:13:46 [nioEventLoopGroup-3-4] systems.server.ServerHandler (ServerHandler.java:62) - Receiving file: server\storage\1\testFileDelete.txt
+ERROR 2022-10-15 01:14:19 [nioEventLoopGroup-3-5] systems.server.ServerHandler (ServerHandler.java:71) - We got exception
+INFO  2022-10-15 01:14:29 [main] systems.server.Server (Server.java:34) - Server started at port: 8189 Waiting connection...
+INFO  2022-10-15 01:18:34 [main] systems.server.Server (Server.java:34) - Server started at port: 8189 Waiting connection...
+ERROR 2022-10-15 01:19:28 [nioEventLoopGroup-3-2] systems.server.ServerHandler (ServerHandler.java:76) - We got exception
+INFO  2022-10-15 01:19:58 [main] systems.server.Server (Server.java:34) - Server started at port: 8189 Waiting connection...
+INFO  2022-10-15 01:25:21 [main] systems.server.Server (Server.java:34) - Server started at port: 8189 Waiting connection...
+INFO  2022-10-15 21:24:51 [main] systems.server.Server (Server.java:34) - Server started at port: 8189 Waiting connection...
+INFO  2022-10-15 21:28:57 [main] systems.server.Server (Server.java:34) - Server started at port: 8189 Waiting connection...
+ERROR 2022-10-15 21:54:46 [nioEventLoopGroup-3-2] systems.server.ServerHandler (ServerHandler.java:76) - We got exception
+ERROR 2022-10-15 21:58:33 [nioEventLoopGroup-3-4] systems.server.ServerHandler (ServerHandler.java:76) - We got exception
+INFO  2022-10-15 22:01:40 [main] systems.server.Server (Server.java:34) - Server started at port: 8189 Waiting connection...
+ERROR 2022-10-15 22:03:13 [nioEventLoopGroup-3-2] systems.server.ServerHandler (ServerHandler.java:77) - We got exception
+INFO  2022-10-15 22:05:39 [main] systems.server.Server (Server.java:34) - Server started at port: 8189 Waiting connection...
+ERROR 2022-10-15 22:07:34 [nioEventLoopGroup-3-2] systems.server.ServerHandler (ServerHandler.java:76) - We got exception
+INFO  2022-10-15 22:14:25 [main] systems.server.Server (Server.java:34) - Server started at port: 8189 Waiting connection...
+INFO  2022-10-15 22:21:17 [main] systems.server.Server (Server.java:34) - Server started at port: 8189 Waiting connection...
+ERROR 2022-10-15 22:22:11 [nioEventLoopGroup-3-2] systems.server.ServerHandler (ServerHandler.java:80) - We got exception
+INFO  2022-10-15 22:25:53 [main] systems.server.Server (Server.java:34) - Server started at port: 8189 Waiting connection...
+ERROR 2022-10-15 22:26:25 [nioEventLoopGroup-3-2] systems.server.ServerHandler (ServerHandler.java:81) - We got exception
+INFO  2022-10-15 22:27:42 [main] systems.server.Server (Server.java:34) - Server started at port: 8189 Waiting connection...
+ERROR 2022-10-15 22:33:13 [nioEventLoopGroup-3-3] systems.server.ServerHandler (ServerHandler.java:81) - We got exception
+ERROR 2022-10-15 22:33:13 [nioEventLoopGroup-3-4] systems.server.ServerHandler (ServerHandler.java:81) - We got exception
+ERROR 2022-10-15 22:33:13 [nioEventLoopGroup-3-2] systems.server.ServerHandler (ServerHandler.java:81) - We got exception
+ERROR 2022-10-15 22:33:13 [nioEventLoopGroup-3-2] systems.server.ServerHandler (ServerHandler.java:81) - We got exception
+INFO  2022-10-15 22:33:20 [main] systems.server.Server (Server.java:34) - Server started at port: 8189 Waiting connection...
+ERROR 2022-10-15 22:33:42 [nioEventLoopGroup-3-2] systems.server.ServerHandler (ServerHandler.java:80) - We got exception
+INFO  2022-10-15 22:34:07 [main] systems.server.Server (Server.java:34) - Server started at port: 8189 Waiting connection...
+ERROR 2022-10-15 22:34:53 [nioEventLoopGroup-3-2] systems.server.ServerHandler (ServerHandler.java:80) - We got exception
+INFO  2022-10-15 22:37:23 [main] systems.server.Server (Server.java:34) - Server started at port: 8189 Waiting connection...
+INFO  2022-10-15 22:40:11 [main] systems.server.Server (Server.java:34) - Server started at port: 8189 Waiting connection...
+INFO  2022-10-15 22:40:51 [nioEventLoopGroup-3-2] systems.server.ServerHandler (ServerHandler.java:64) - Receiving file: server\storage\1\testFileDelete.txt
+INFO  2022-10-15 22:40:51 [nioEventLoopGroup-3-3] systems.server.ServerHandler (ServerHandler.java:64) - Receiving file: server\storage\1\testFileDelete2.txt
+INFO  2022-10-15 22:44:01 [main] systems.server.Server (Server.java:34) - Server started at port: 8189 Waiting connection...
+INFO  2022-10-15 22:44:35 [nioEventLoopGroup-3-2] systems.server.ServerHandler (ServerHandler.java:64) - Receiving file: server\storage\1\testFileDelete.txt
+INFO  2022-10-15 22:44:35 [nioEventLoopGroup-3-3] systems.server.ServerHandler (ServerHandler.java:64) - Receiving file: server\storage\1\testFileDelete2.txt
+INFO  2022-10-15 22:47:38 [nioEventLoopGroup-3-2] systems.server.ServerHandler (ServerHandler.java:64) - Receiving file: server\storage\1\testFileDelete.txt
+INFO  2022-10-15 22:47:38 [nioEventLoopGroup-3-3] systems.server.ServerHandler (ServerHandler.java:64) - Receiving file: server\storage\1\testFileDelete2.txt
+INFO  2022-10-15 23:03:03 [main] systems.server.Server (Server.java:34) - Server started at port: 8189 Waiting connection...
+INFO  2022-10-15 23:03:28 [nioEventLoopGroup-3-2] systems.server.ServerHandler (ServerHandler.java:64) - Receiving file: server\storage\1\testFileDelete.txt
+INFO  2022-10-15 23:03:28 [nioEventLoopGroup-3-3] systems.server.ServerHandler (ServerHandler.java:64) - Receiving file: server\storage\1\testFileDelete2.txt
+INFO  2022-10-15 23:07:48 [nioEventLoopGroup-3-1] systems.server.ServerHandler (ServerHandler.java:64) - Receiving file: server\storage\1\testFileDelete.txt
+INFO  2022-10-15 23:07:48 [nioEventLoopGroup-3-2] systems.server.ServerHandler (ServerHandler.java:64) - Receiving file: server\storage\1\testFileDelete2.txt

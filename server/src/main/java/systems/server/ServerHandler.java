@@ -49,20 +49,28 @@ public class ServerHandler extends SimpleChannelInboundHandler<Message> {
     }
 
     private void msgStorage(ChannelHandlerContext ctx, Message msg) throws IOException {
-        if (msg.getStorageCommand().equals(StorageCommands.PUT)) {
-            Path root = Path.of(SERVER_USER_DIR + msg.getUsername());
-            Files.createDirectories(root);
-            Path file = root.resolve(msg.getFile().getName());
-            try {
-                Files.createFile(file);
-            } catch (FileAlreadyExistsException ignored) {
-                logger.error("File already exist");
+        String result = null;
+        switch (msg.getStorageCommand()) {
+            case PUT -> {
+                Path root = Path.of(SERVER_USER_DIR + msg.getUsername());
+                Files.createDirectories(root);
+                Path file = root.resolve(msg.getFile().getName());
+                try {
+                    Files.createFile(file);
+                } catch (FileAlreadyExistsException ignored) {
+                    logger.error("File already exist");
+                }
+                Files.write(file, msg.getData());
+                logger.info("Receiving file: " + file);
+                result = String.format("File %s received\n", msg.getFile().getName());
             }
-            Files.write(file, msg.getData());
-            logger.info("Receiving file: " + file);
+            case DEL -> {
+                Files.delete(Path.of(msg.getFilePath()));
+                result = String.format("File %s deleted", msg.getFilePath());
+            }
         }
 
-        ChannelFuture future = ctx.writeAndFlush(String.format("File %s sended\n", msg.getFile().getName()));
+        ChannelFuture future = ctx.writeAndFlush(result);
         future.addListener(ChannelFutureListener.CLOSE);
     }
 
