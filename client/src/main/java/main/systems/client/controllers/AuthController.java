@@ -2,16 +2,20 @@ package main.systems.client.controllers;
 
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import main.systems.client.Client;
+import main.systems.client.ClientApplication;
 import main.systems.client.Dialogs;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import systems.common.Message;
 import systems.common.SqlCommands;
 
+import java.io.IOException;
 
 
 public class AuthController {
@@ -30,8 +34,14 @@ public class AuthController {
     private static final Logger logger = LogManager.getLogger(AuthController.class);
 
     @FXML
-    public void executeAuth() {
+    public void executeAuth() throws IOException {
         String login = loginField.getText();
+
+        //---------transfer field between controllers
+        ClientController clientController = ClientApplication.getINSTANCE().getClientController();
+        clientController.setUserName(login);
+        //-------------------------------------------
+
         String password = passwordField.getText();
         if (checkCredentials()) {
             Message message = new Message(SqlCommands.SELECT_USERNAME_AUTH, login, password);

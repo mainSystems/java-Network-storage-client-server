@@ -4,15 +4,13 @@ import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.*;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.nio.NioSocketChannel;
-import io.netty.handler.codec.DelimiterBasedFrameDecoder;
-import io.netty.handler.codec.Delimiters;
-import io.netty.handler.codec.LineBasedFrameDecoder;
+import io.netty.handler.codec.serialization.ClassResolvers;
+import io.netty.handler.codec.serialization.ObjectDecoder;
 import io.netty.handler.codec.serialization.ObjectEncoder;
-import io.netty.handler.codec.string.StringDecoder;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import systems.common.Message;
-import java.nio.charset.StandardCharsets;
+
 import java.util.function.Consumer;
 
 
@@ -20,6 +18,7 @@ public class Client {
 
     private final String host;
     private final int port;
+    private static final int MAX_OBJECT_SIZE = 1024 * 1024 * 100;
     private static final Logger logger = LogManager.getLogger(Client.class);
 
     public Client(String host, int port) {
@@ -55,8 +54,7 @@ public class Client {
                 protected void initChannel(Channel ch) throws Exception {
                     ch.pipeline().addLast(
                         new ObjectEncoder(),
-                        new DelimiterBasedFrameDecoder(8192, Delimiters.lineDelimiter()),
-                        new StringDecoder(StandardCharsets.UTF_8),
+                        new ObjectDecoder(MAX_OBJECT_SIZE, ClassResolvers.cacheDisabled(null)),
                         new ClientHandler(message,callback)
                     );
                 }

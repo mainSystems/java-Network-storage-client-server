@@ -4,6 +4,7 @@ import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import systems.common.CommandType;
 import systems.common.Message;
 
 import java.util.function.Consumer;
@@ -21,26 +22,20 @@ public class ClientHandler extends SimpleChannelInboundHandler<Message> {
 
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
-        //when connected to server
-        ctx.writeAndFlush(message);
+        ctx.writeAndFlush(message); //when connected to server
     }
 
-//    @Override
-//    protected void channelRead0(ChannelHandlerContext ctx, String msg) throws Exception {
-//        callback.accept(msg);
-//        System.out.println(msg);
-//    }
     @Override
     protected void channelRead0(ChannelHandlerContext ctx, Message msg) throws Exception {
         callback.accept(msg);
-        System.out.println(msg.getCommandType());
-        System.out.println(msg.getUsername());
+        if (msg.getCommandType().equals(CommandType.SQL) && !msg.getUsername().isEmpty()) {
+            ClientApplication.getINSTANCE().switchToMainWindow(msg.getUsername());
+        }
     }
 
     @Override
     public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
-        // what we do if take exception, without this method we can get oom
-        logger.error("We got exception");
+        logger.error("We got exception"); // what we do if take exception, without this method we can get oom
         cause.printStackTrace();
     }
 }

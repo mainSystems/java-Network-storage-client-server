@@ -5,12 +5,13 @@
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.systems.client.controllers.ClientController">
    <top>
-      <Label fx:id="label" contentDisplay="CENTER" onMouseClicked="#handleMouseClicked" text="NetworkStorage" BorderPane.alignment="CENTER" />
+      <Label fx:id="clientLabel" contentDisplay="CENTER" onMouseClicked="#handleMouse" text="NetworkStorage" BorderPane.alignment="CENTER" />
    </top>
    <bottom>
       <ProgressBar prefHeight="18.0" prefWidth="425.0" progress="0.0" BorderPane.alignment="CENTER" />
    </bottom>
    <center>
-      <TreeView fx:id="treeView" onDragDropped="#handleDropped" onDragOver="#handleDragOver" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+<!--      <TreeView fx:id="treeView" onDragDropped="#handleOnDragDropped" onDragOver="#handleDragOver" onMouseClicked="#handleSelectItems" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />-->
+      <TreeView fx:id="treeView" onDragDetected="#handleOnDragDetected" onDragDropped="#handleOnDragDropped" onDragOver="#handleDragOver" onKeyPressed="#keyPressed" onMouseClicked="#handleMouse" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
    </center>
 </BorderPane>
