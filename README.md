@@ -1,7 +1,7 @@
-# javaNetworkStorage
+#  java-Network-storage-client-server 
 
 <h1 align="center">Hi 👋, I'm Dn</h1>
-<h3 align="center">Network messenger client-server</h3>
+<h3 align="center">Network storage client-server</h3>
 
 - 👨‍💻 All of my projects are available at [https://github.com/mainSystems?tab=repositories](https://github.com/mainSystems?tab=repositories)
 
